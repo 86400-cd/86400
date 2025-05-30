@@ -14,7 +14,7 @@
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: #0f0f0f;
-      color: #fff;
+      color: #ffffff;
     }
     nav {
       position: sticky;
@@ -24,7 +24,7 @@
       text-align: center;
       font-size: 1.5rem;
       letter-spacing: 2px;
-      font-weight: 700;
+      font-weight: bold;
       z-index: 999;
     }
     header {
@@ -33,116 +33,59 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(15,15,15,1)),
-        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80')
-        center/cover no-repeat;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(15,15,15,1)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
       position: relative;
-      padding: 0 1rem;
     }
     .hero-title {
-      font-size: 6rem;
-      font-weight: 700;
-      animation: glow 2.5s ease-in-out infinite alternate;
-      user-select: none;
-      text-shadow:
-        0 0 10px #e63946,
-        0 0 20px #e63946,
-        0 0 30px #ff6b6b,
-        0 0 40px #ff6b6b;
+      font-size: 5rem;
+      font-weight: 600;
+      animation: glow 2s ease-in-out infinite alternate;
     }
     @keyframes glow {
-      0% {
-        text-shadow:
-          0 0 10px #e63946,
-          0 0 20px #e63946,
-          0 0 30px #ff6b6b,
-          0 0 40px #ff6b6b;
+      from {
+        text-shadow: 0 0 10px #e63946, 0 0 20px #e63946;
       }
-      100% {
-        text-shadow:
-          0 0 20px #ff6b6b,
-          0 0 30px #ff6b6b,
-          0 0 40px #e63946,
-          0 0 50px #e63946;
+      to {
+        text-shadow: 0 0 20px #ff6b6b, 0 0 30px #ff6b6b;
       }
     }
     .hero-sub {
-      font-size: 1.8rem;
-      max-width: 650px;
-      margin: 1rem 0 2rem 0;
+      font-size: 1.5rem;
+      max-width: 600px;
+      margin: 1rem 0;
       color: #ddd;
-      line-height: 1.4;
     }
     .btn-primary {
-      padding: 1rem 3rem;
+      padding: 0.8rem 2rem;
       background: #e63946;
       border: none;
       color: white;
-      font-size: 1.1rem;
+      font-size: 1rem;
       border-radius: 50px;
       cursor: pointer;
       transition: background 0.3s ease;
       text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.6);
-      user-select: none;
     }
     .btn-primary:hover {
       background: #c92c3a;
-      box-shadow: 0 8px 25px rgba(201, 44, 58, 0.8);
     }
     .section {
       padding: 4rem 2rem;
       max-width: 900px;
       margin: 0 auto;
-      color: #eee;
     }
     .section h2 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
       text-align: center;
-      color: #ff6b6b;
-      text-transform: uppercase;
-      letter-spacing: 3px;
     }
     .section p {
-      font-size: 1.2rem;
-      line-height: 1.7;
+      font-size: 1.1rem;
+      line-height: 1.6;
       text-align: center;
-      max-width: 700px;
-      margin: 0 auto 1.5rem auto;
-    }
-    .quote-carousel {
-      max-width: 600px;
-      margin: 3rem auto 0;
-      font-style: italic;
-      font-size: 1.3rem;
-      color: #ccc;
-      height: 3.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .quote-carousel p {
-      position: absolute;
-      width: 100%;
-      opacity: 0;
-      animation: fadeQuotes 16s infinite;
-      margin: 0;
-    }
-    .quote-carousel p:nth-child(1) { animation-delay: 0s; }
-    .quote-carousel p:nth-child(2) { animation-delay: 4s; }
-    .quote-carousel p:nth-child(3) { animation-delay: 8s; }
-    .quote-carousel p:nth-child(4) { animation-delay: 12s; }
-
-    @keyframes fadeQuotes {
-      0% {opacity: 0;}
-      10% {opacity: 1;}
-      25% {opacity: 1;}
-      35% {opacity: 0;}
-      100% {opacity: 0;}
     }
     .product {
       display: flex;
@@ -152,37 +95,35 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(255,255,255,0.1);
-      transition: transform 0.3s ease;
-    }
-    .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(255,107,107,0.5);
     }
     .product img {
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       object-fit: cover;
       flex-shrink: 0;
     }
     .product-details {
-      padding: 1.5rem 2rem;
+      padding: 1rem;
+      flex-grow: 1;
     }
     .product h3 {
-      margin: 0 0 0.7rem 0;
+      margin: 0 0 0.5rem;
       color: #ff6b6b;
-      font-weight: 700;
-    }
-    .product p {
-      margin: 0 0 0.8rem 0;
-      color: #ccc;
-      font-size: 1.1rem;
     }
     .product a {
       color: #fff;
       text-decoration: underline;
       font-weight: 600;
-      font-size: 1.1rem;
-      cursor: pointer;
+    }
+    .product a:hover {
+      color: #e63946;
+    }
+    .quote {
+      font-style: italic;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 3rem;
+      color: #ccc;
     }
     footer {
       text-align: center;
@@ -190,23 +131,6 @@
       font-size: 0.9rem;
       color: #777;
       background: #000;
-      user-select: none;
-    }
-    @media (max-width: 700px) {
-      .hero-title {
-        font-size: 4rem;
-      }
-      .product {
-        flex-direction: column;
-        text-align: center;
-      }
-      .product img {
-        width: 100px;
-        height: 100px;
-      }
-      .product-details {
-        padding: 1rem;
-      }
     }
   </style>
 </head>
@@ -221,47 +145,68 @@
 
   <section class="section" id="story">
     <h2>The 86400 Mindset</h2>
-    <p>There are 86,400 seconds in a day. That’s 86,400 opportunities to do better. To change. To start over. To dream. To work. To become. 86400 is more than a number — it's a reminder that time is the most valuable currency, and you spend it every single second whether you realize it or not.</p>
-    <p>You don’t have to be perfect. You just have to be intentional. And that starts now.</p>
-    <p>In ancient times, civilizations tracked time meticulously to harness its power for growth and transformation. Today, that legacy lives on in every moment you choose to invest wisely.</p>
-
-    <div class="quote-carousel" aria-live="polite">
-      <p>“You become what you consistently do. Make each second count.”</p>
-      <p>“Time is what we want most, but what we use worst.” – William Penn</p>
-      <p>“Don’t count the days; make the days count.” – Muhammad Ali</p>
-      <p>“Lost time is never found again.” – Benjamin Franklin</p>
-    </div>
+    <p>
+      There are 86,400 seconds in a day. That’s 86,400 opportunities to do better. To change. To start over. To dream. To work. To become. 86400 is more than a number — it's a reminder that time is the most valuable currency, and you spend it every single second whether you realize it or not.
+    </p>
+    <p>
+      You don’t have to be perfect. You just have to be intentional. And that starts now.
+    </p>
+    <p>
+      The concept of 86400 pushes us to seize every moment, to live with purpose and passion, and to never take a single second for granted.
+    </p>
+    <div class="quote">“You become what you consistently do. Make each second count.”</div>
+    <div class="quote">“Time is what we want most, but what we use worst.” – William Penn</div>
+    <div class="quote">“Don’t watch the clock; do what it does. Keep going.” – Sam Levenson</div>
   </section>
 
-  <section class="section">
+  <section class="section" id="products">
     <h2>Power Your Day</h2>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1607083209358-59a37f5a2714" alt="Beet Root" />
+      <img src="https://images.unsplash.com/photo-1607083209358-59a37f5a2714?auto=format&fit=crop&w=120&q=80" alt="Beet Root Powder" />
       <div class="product-details">
-        <h3>Beet Root Powder</h3>
+        <h3>BEET ROOT POWDER</h3>
         <p>Boost endurance, blood flow, and heart health.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        <a href="https://amzn.to/44XHrEV" target="_blank" rel="noopener noreferrer">Buy Now</a>
       </div>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1592233495354-3b1b4b183bd8" alt="Maca Root" />
+      <img src="https://images.unsplash.com/photo-1592233495354-3b1b4b183bd8?auto=format&fit=crop&w=120&q=80" alt="Organic Black Maca Root" />
       <div class="product-details">
-        <h3>Maca Root</h3>
+        <h3>ORGANIC BLACK MACA ROOT</h3>
         <p>Fuel energy, stamina, and hormonal balance.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        <a href="https://amzn.to/3HlBTdr" target="_blank" rel="noopener noreferrer">Buy Now</a>
       </div>
     </div>
 
     <div class="product">
-      <img src="https://images.unsplash.com/photo-1588776814546-ec7c54f314a3" alt="Magnesium" />
+      <img src="https://images.unsplash.com/photo-1588776814546-ec7c54f314a3?auto=format&fit=crop&w=120&q=80" alt="Magnesium Glycinate" />
       <div class="product-details">
-        <h3>Magnesium</h3>
+        <h3>MAGNESIUM GLYCINATE</h3>
         <p>Improve recovery, sleep, and calm.</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Buy Now</a>
+        <a href="https://amzn.to/3SsWkYo" target="_blank" rel="noopener noreferrer">Buy Now</a>
       </div>
     </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1556228721-23075c8cfd20?auto=format&fit=crop&w=120&q=80" alt="Organic Ashwagandha Powder" />
+      <div class="product-details">
+        <h3>ORGANIC ASHWAGANDHA POWDER</h3>
+        <p>Supports stress relief, mental clarity, and hormonal balance.</p>
+        <a href="https://amzn.to/3Z6NOlv" target="_blank" rel="noopener noreferrer">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=120&q=80" alt="Mushroom Powder" />
+      <div class="product-details">
+        <h3>MUSHROOM POWDER</h3>
+        <p>Boost immunity, mental clarity, natural energy, and support weight loss.</p>
+        <a href="https://amzn.to/4dFQMn9" target="_blank" rel="noopener noreferrer">Buy Now</a>
+      </div>
+    </div>
+
   </section>
 
   <footer>
